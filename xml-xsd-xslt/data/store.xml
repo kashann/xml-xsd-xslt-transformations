@@ -1,0 +1,12 @@
+<tns:store xmlns:tns="http://www.example.org/store/">
+	<tns:categories>
+		<tns:category name="Wines">
+			<tns:products>
+				<tns:product id="abc-123-xyz"
+					name="Bordeaux"
+					price="19.95"
+					description="None"/>
+			</tns:products>
+		</tns:category>
+	</tns:categories>
+</tns:store>

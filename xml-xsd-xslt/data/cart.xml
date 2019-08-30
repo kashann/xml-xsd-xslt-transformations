@@ -1,0 +1,3 @@
+<tns:cart xmlns:tns="http://www.example.org/cart/">
+	<tns:item productId="abc-123-xyz" units="2"/>
+</tns:cart>

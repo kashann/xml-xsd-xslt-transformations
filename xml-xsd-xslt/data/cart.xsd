@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/cart/"
+	targetNamespace="http://www.example.org/cart/">
+	<xsd:element name="cart" type="tns:Cart"/>
+	<xsd:complexType name="Cart">
+		<xsd:sequence>
+			<xsd:element name="item" form="qualified">
+				<xsd:complexType>
+					<xsd:attribute name="productId"
+						type="xsd:string" use="required"/>
+					<xsd:attribute name="units"
+						type="xsd:int" use="required"/>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

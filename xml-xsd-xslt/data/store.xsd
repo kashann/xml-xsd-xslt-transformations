@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/store/"
+	targetNamespace="http://www.example.org/store/">
+    <xsd:element name="store" type="tns:Store"/>
+    <xsd:complexType name="Store">
+    <xsd:sequence>
+    	<xsd:element name="categories" 
+    			minOccurs="0"
+    			maxOccurs="1"
+    			type="tns:CategoryList"
+    			form="qualified"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="CategoryList">
+    	<xsd:sequence>
+    		<xsd:element name="category"
+    			minOccurs="0"
+    			maxOccurs="unbounded"
+    			type="tns:Category"
+    			form="qualified"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Category">
+    	<xsd:sequence>
+    		<xsd:element name="products"
+    			minOccurs="0"
+    			maxOccurs="1"
+    			type="tns:ProductList"
+    			form="qualified"/>
+    	</xsd:sequence>
+    	<xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="ProductList">
+    	<xsd:sequence>
+    		<xsd:element name="product"
+    			minOccurs="0"
+    			maxOccurs="unbounded"
+    			type="tns:Product"
+    			form="qualified"/>
+    	</xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="Product">
+    	<xsd:attribute name="id" type="xsd:string" use="required"/>
+    	<xsd:attribute name="name" type="xsd:string" use="required"/>
+    	<xsd:attribute name="price" type="xsd:float" use="required"/>
+    	<xsd:attribute name="description" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,4 @@
+<updates>
+	<action type="delete" item="2"/>
+	<action type="update" item="3" units="10"/>
+</updates> 
